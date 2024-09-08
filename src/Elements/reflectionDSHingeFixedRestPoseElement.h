@@ -13,7 +13,7 @@
 #endif
 
 
-#include "DofElementBase.h"
+#include <SimLib/Elements/DofElementBase.h>
 
 class reflectionDSHingeFixedRestPoseElement: public DofElementBase
 {

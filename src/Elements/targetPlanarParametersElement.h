@@ -1,7 +1,7 @@
 #pragma once
 #ifndef TARGET_PLANAR_PARAMETERS_ELEMENT_H
 #define TARGET_PLANAR_PARAMETERS_ELEMENT_H
-#include "DofElementBase.h"
+#include <SimLib/Elements/DofElementBase.h>
 class targetPlanarParametersElement :
 	public DofElementBase
 {

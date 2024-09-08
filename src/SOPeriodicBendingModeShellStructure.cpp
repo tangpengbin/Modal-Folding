@@ -1,6 +1,6 @@
 #include "SOPeriodicBendingModeShellStructure.h"
-#include "./Core/SOUtils.h"
-#include "./Viewer/colormap.h"
+#include <SimLib/Core/SOUtils.h>
+#include <SimLib/Viewer/colormap.h>
 
 #include <fstream>
 

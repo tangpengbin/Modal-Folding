@@ -1,5 +1,5 @@
 #include "periodicDSHingeFixedRestPoseElement.h"
-#include "../Core/SOUtils.h"
+#include <SimLib/Core/SOUtils.h>
 #include "../Codegen/computeDSBendingFixedRestPoseEnergy.h"
 #include "../Codegen/computedTheta.h"
 #include"../Codegen/computeCylindericalTransformVertex.h"

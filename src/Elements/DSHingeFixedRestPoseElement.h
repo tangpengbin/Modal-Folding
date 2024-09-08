@@ -4,9 +4,7 @@
 #if _MSC_VER > 1000
 #pragma once
 #endif
-//#include "../../SimLib/src/Elements/DofElementBase.h"
 #include <SimLib/Elements/DofElementBase.h>
-// #include "DofElementBase.h"
 
 class DSHingeFixedRestPoseElement: public DofElementBase
 {

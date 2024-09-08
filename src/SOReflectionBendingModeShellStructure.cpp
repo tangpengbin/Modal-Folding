@@ -1,8 +1,8 @@
 #include "SOReflectionBendingModeShellStructure.h"
-#include "./Core/SOUtils.h"
-#include "./Geom/Primitive.h"
-#include "./Viewer/colormap.h"
-#include "./Geom/SimpleTriMesh.h"
+#include <SimLib/Core/SOUtils.h>
+#include <SimLib/Geom/Primitive.h>
+#include <SimLib/Viewer/colormap.h>
+#include <SimLib/Geom/SimpleTriMesh.h>
 
 #include <fstream>
 #include <stdlib.h>
@@ -40,7 +40,7 @@
 #include <ipc/distance/point_triangle.hpp>
 
 
-#include "./Core/UnconstrainedNewton.h"
+#include <SimLib/Core/UnconstrainedNewton.h>
 
 
 #include <Spectra/SymEigsShiftSolver.h>

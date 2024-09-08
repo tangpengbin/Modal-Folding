@@ -4,8 +4,8 @@
 #include <string>
 
 //simopt
-#include "./Core/SOTypes.h"
-#include "./Core/SOUtils.h"
+#include <SimLib/Core/SOTypes.h>
+#include <SimLib/Core/SOUtils.h>
 #include <nlohmann/json.hpp>
 #include "SOBendingModeShellStructure.h"
 

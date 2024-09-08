@@ -1,5 +1,5 @@
 #include "CSTShellElement.h"
-#include "../Core/SOUtils.h"
+#include <SimLib/Core/SOUtils.h>
 #include "../Codegen/computeCSTShellEnergy.h"
 #include "../Codegen/computeCSTShellEnergyGreenStrain.h"
 

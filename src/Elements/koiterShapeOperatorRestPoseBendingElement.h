@@ -6,7 +6,7 @@
 #endif
 
 
-#include "DofElementBase.h"
+#include <SimLib/Elements/DofElementBase.h>
 
 class koiterShapeOperatorRestPoseBendingElement : public DofElementBase
 {

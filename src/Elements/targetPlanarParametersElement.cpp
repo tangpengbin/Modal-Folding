@@ -1,5 +1,5 @@
 #include "targetPlanarParametersElement.h"
-#include "../Core/SOUtils.h"
+#include <SimLib/Core/SOUtils.h>
 
 void targetPlanarParametersElement::init(const std::vector<int>& dofIdcs, const std::vector<int>& pIdcs,
 	double penaltyStiffness,

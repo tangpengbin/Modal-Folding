@@ -2,7 +2,7 @@
 #ifndef PAIR_ATTACHMENT_ELEMENT_H
 #define PAIR_ATTACHMENT_ELEMENT_H
 
-#include "DofElementBase.h"
+#include <SimLib/Elements/DofElementBase.h>
 class pairAttachmentElement :
     public DofElementBase
 {

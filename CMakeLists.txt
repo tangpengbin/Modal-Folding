@@ -1,6 +1,15 @@
 cmake_minimum_required(VERSION 3.17.0)
+include(FetchContent)
 
-add_subdirectory(SimLib)
+#add our glad first, libigl is then gonna use it
+message(STATUS "SimLib")
+FetchContent_Declare(
+	SimLib
+	GIT_REPOSITORY https://github.com/tangpengbin/SimLib.git
+	GIT_TAG main
+)
+FetchContent_MakeAvailable(SimLib)
+
 
 project(SimShellProject)
 SET(CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake") 

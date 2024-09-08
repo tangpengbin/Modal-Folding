@@ -4,18 +4,18 @@
 #if _MSC_VER > 1000
 #pragma once
 #endif
-//#include "SODeformableVibration.h>
-#include "SODeformableObject.h"
-#include "Elements/FixDoFElement.h"
+
+#include <SimLib/SODeformableObject.h>
+#include <SimLib/Elements/FixDoFElement.h>
 
 #include "Elements/CSTShellElement.h"
 #include "Elements/DSHingeFixedRestPoseElement.h"
 #include "Elements/koiterShapeOperatorRestPoseBendingElement.h"
 
 #include "./Elements/pairAttachmentElement.h"
-#include "./Collision/AABBTree.h"
-#include "Core/UnconstrainedNewton.h"
-#include "Geom/SimpleTriMesh.h"
+#include <SimLib/Collision/AABBTree.h>
+#include <SimLib/Core/UnconstrainedNewton.h>
+#include <SimLib/Geom/SimpleTriMesh.h>
 
 #include <ipc/ipc.hpp>
 

@@ -1,5 +1,5 @@
 #include "SOBendingModeShellStructure.h"
-#include "./Core/SOUtils.h"
+#include <SimLib/Core/SOUtils.h>
 
 #include <fstream>
 #include <stdlib.h>
@@ -29,8 +29,8 @@
 #include <igl/adjacency_list.h>
 #include <igl/boundary_loop.h>
 
-#include "Core/UnconstrainedLBFGS.h"
-#include "Core/colormap.h"
+#include <SimLib/Core/UnconstrainedLBFGS.h>
+#include <SimLib/Core/colormap.h>
 
 //ipc
 #include "ipc/ipc.hpp"

@@ -4,7 +4,7 @@
 #if _MSC_VER > 1000
 #pragma once
 #endif
-#include "DofElementBase.h"
+#include <SimLib/Elements/DofElementBase.h>
 class periodicCSTShellElement :
 	public DofElementBase
 {

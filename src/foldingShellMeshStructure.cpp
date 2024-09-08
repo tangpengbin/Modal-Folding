@@ -18,8 +18,8 @@
 #include <igl/readOBJ.h>
 
 //simopt headers
-#include "Core/File.h"
-#include "Geom/MeshObj.h"
+#include <SimLib/Core/File.h>
+#include <SimLib/Geom/MeshObj.h>
 
 #include "SOPeriodicBendingModeShellStructure.h"
 #include "SOReflectionBendingModeShellStructure.h"
@@ -361,9 +361,6 @@ void foldingShellMeshStructure::loadHomogenizedMesh(nlohmann::json& j)
 
         auto targetMeshObj_jason = *el.find("targetMeshObj");
         m_targetMeshObj_str = targetMeshObj_jason.get<string>();
-
-        auto m_collisionMeshObj_jason = *el.find("collisionMeshObj");
-        m_collisionMeshObj_str = m_collisionMeshObj_jason.get<string>();
 
         
         //auto m_strainSpaceLimitingModel_jason = *el.find("strainSpaceLimitingModel");

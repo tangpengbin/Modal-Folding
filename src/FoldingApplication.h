@@ -2,7 +2,7 @@
 #ifndef FOLDING_APPLICATION
 #define FOLDING_APPLICATION
 
-#include "Application.h"
+#include <SimLib/Application.h>
 
 #include <Eigen/Core>
 
