@@ -23,7 +23,7 @@
 			"isPeriodic": false,
 			"periodicLeftToRight": [0.2,0,0],
 			"periodicTopToBottom": [0,-0.2,0],
-			"isReflection" : true,
+			"isReflection" : false,
 			"fourReflectionPlane": [-0.1,0.1,0.1,-0.1]
 		}
 	]

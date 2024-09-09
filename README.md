@@ -9,13 +9,13 @@ This is an implementation of [Modal Folding: Discovering Smooth Folding Patterns
 If you use this repository in your work, please cite our paper.
 
 ```bibtex
-    @inproceedings{tang2024modal,
-    title={Modal Folding: Discovering Smooth Folding Patterns for Sheet Materials using Strain-Space Modes},
-    author={Tang, Pengbin and Hinchet, Ronan and Poranne, Roi and Thomaszewski, Bernhard and Coros, Stelian},
-    booktitle={ACM SIGGRAPH 2024 Conference Papers},
-    pages={1--9},
-    year={2024}
-    }
+@inproceedings{tang2024modal,
+title={Modal Folding: Discovering Smooth Folding Patterns for Sheet Materials using Strain-Space Modes},
+author={Tang, Pengbin and Hinchet, Ronan and Poranne, Roi and Thomaszewski, Bernhard and Coros, Stelian},
+booktitle={ACM SIGGRAPH 2024 Conference Papers},
+pages={1--9},
+year={2024}
+}
 ```
 
 # Build
