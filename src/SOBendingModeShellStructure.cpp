@@ -761,7 +761,6 @@ void SOBendingModeShellStructure::computeLinearModes()
 	if (considerMass)
 	{
 		if (!USE_SPECTRA)
-			//if(true)
 		{
 				
 			Eigen::GeneralizedSelfAdjointEigenSolver<Eigen::MatrixXd> generalizedEigSolver(m_A.toDense(), computeMassMatrix().toDense());
@@ -781,7 +780,7 @@ void SOBendingModeShellStructure::computeLinearModes()
 		else
 		{
 			//nmodes = 15;
-			Spectra::SparseSymMatProd<double> op(m_A);
+			/*Spectra::SparseSymMatProd<double> op(m_A);
 			Spectra::SparseCholesky<double>  Bop(computeMassMatrix());
 			Spectra::SymGEigsSolver<Spectra::SparseSymMatProd<double>, Spectra::SparseCholesky<double>, Spectra::GEigsMode::Cholesky>
 				geigs(op, Bop, nmodes, 2 * nmodes);
@@ -798,13 +797,30 @@ void SOBendingModeShellStructure::computeLinearModes()
 				eigen_modal_analysis[nmodes - i - 1].first = geigs.eigenvalues()[i];
 				eigen_modal_analysis[nmodes - i - 1].second = Eigen::VectorXd(geigs.eigenvectors().col(i));
 				spdlog::info("Eigen mode {} with eigenvalue {}", nmodes - i - 1, eigen_modal_analysis[nmodes - i - 1].first);
+			}*/
+			Spectra::SparseSymShiftSolve<double, Eigen::Upper> op(m_A);
+			double shift = -1e-1;
+			Spectra::SymEigsShiftSolver<Spectra::SparseSymShiftSolve<double, Eigen::Upper> > eigs(op, nmodes, 2 * nmodes, shift);
+			eigs.init();
+			eigs.compute();
+			if (eigs.info() == Spectra::CompInfo::Successful)
+			{
+				Eigen::VectorXd evalues = eigs.eigenvalues();
+				//m_lambdas = evalues;
+				//std::cout << "Eigenvalues found:\n" << evalues << std::endl;
+			}
+			int neigs = eigs.eigenvalues().size();
+			for (int i = 0; i < nmodes; i++)
+			{
+				eigen_modal_analysis[nmodes - i - 1].first = eigs.eigenvalues()[i];
+				eigen_modal_analysis[nmodes - i - 1].second = Eigen::VectorXd(eigs.eigenvectors().col(i));
+				spdlog::info("Eigen mode {} with eigenvalue {}", nmodes - i - 1, eigen_modal_analysis[nmodes - i - 1].first);
 			}
 		}
 	}
 	else
 	{
 		if (!USE_SPECTRA)
-			//if(true)
 		{
 			Eigen::SelfAdjointEigenSolver<SpMat> eigSolver(m_A);
 
@@ -816,7 +832,6 @@ void SOBendingModeShellStructure::computeLinearModes()
 				//m_modes[nmodes-i-1]= dVector(eigSolver.eigenvectors().col(i));
 				//m_lambdas[nmodes-i-1] = eigSolver.eigenvalues()[i];
 			}
-			printf("done\n");
 			//for (int i = 0; i < (15>nmodes ? nmodes : 15); i++)
 			//	printf("Eigenvalue %d=%e\n", i, eigen_modal_analysis[i].first);
 		}
@@ -843,7 +858,6 @@ void SOBendingModeShellStructure::computeLinearModes()
 			}
 		}
 	}
-	printf("done\n");
 
 
 	for (int i = 6; i < nmodes; i++)

@@ -26,6 +26,9 @@ void periodicDSHingeFixedRestPoseElement::init(const std::vector<int>& dofIdcs, 
 
 	m_verticesTranslationMultipliers = verticesTranslationMultipliers;
 
+	m_bendingCurvature = 0.0;
+	m_bendingDirection = Eigen::Vector2d(1.0, 0.0);
+
 	m_theta0 = getCurrentAngle(vx);
 	m_theta_initial = m_theta0;
 	//printf("the rest angle is %f\n", m_theta0);
@@ -40,8 +43,6 @@ void periodicDSHingeFixedRestPoseElement::init(const std::vector<int>& dofIdcs, 
 		m_dxdt0t1(3 * i + 1, 3) = m_verticesTranslationMultipliers[i][1];
 	}
 
-	m_bendingCurvature = 0.0;
-	m_bendingDirection = Eigen::Vector2d(1.0, 0.0);
 }
 
 std::vector<V3D> periodicDSHingeFixedRestPoseElement::computePositions(const Eigen::VectorXd& vx)
