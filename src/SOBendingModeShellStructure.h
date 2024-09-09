@@ -191,7 +191,6 @@ public:
 
 	bool m_useLinearModes;
 	bool m_useStrainSpaceModes;
-	bool m_useDevelopableStrainSpaceModes;
 
 	//compute with length
 	double m_computeModeLength;

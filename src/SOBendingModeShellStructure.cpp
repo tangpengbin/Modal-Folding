@@ -106,7 +106,6 @@ SOBendingModeShellStructure::SOBendingModeShellStructure()
 	m_animateModes = false;
 	m_useLinearModes = false;
 	m_useStrainSpaceModes = false;
-	m_useDevelopableStrainSpaceModes = false;
 	m_modesAnimationID = 6;
 	m_modesAmplitude = 25.0;
 
@@ -1715,7 +1714,6 @@ void SOBendingModeShellStructure::renderImGUIViewerWindow()
 			ImGui::Checkbox("Animate Modes", &m_animateModes);
 			ImGui::Checkbox("Use Linear Modes", &m_useLinearModes);
 			ImGui::Checkbox("Use Strain Space Modes", &m_useStrainSpaceModes);
-			ImGui::Checkbox("Use Developable Strain Space Modes", &m_useDevelopableStrainSpaceModes);
 			/*
 			if (m_animateModes)
 			{

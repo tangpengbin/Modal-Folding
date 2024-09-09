@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.17.0)
 include(FetchContent)
 
-#add our glad first, libigl is then gonna use it
+#add our SimLib
 message(STATUS "SimLib")
 FetchContent_Declare(
 	SimLib
