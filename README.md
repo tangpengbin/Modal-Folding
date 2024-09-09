@@ -4,7 +4,9 @@
 <a href="https://tangpengbin.github.io/publications/Folding/index.html"><img alt="Modal Folding" src="https://tangpengbin.github.io/publications/Folding/project_files/images/teaser.jpg" width="30%"></a>
 </p>
 
-This is an implementation of [Modal Folding: Discovering Smooth Folding Patterns for Sheet Materials using Strain-Space Modes](https://tangpengbin.github.io/publications/Folding/index.html) [Tang et al. 2024].
+[Pengbin Tang](https://tangpengbin.github.io/), [Ronan Hinchet](https://scholar.google.co.kr/citations?user=L-mz4LIAAAAJ&hl=en), [Roi Poranne](https://scholar.google.com/citations?user=xC6XLaYAAAAJ&hl=en), [Bernhard Thomaszewski](https://n.ethz.ch/~bthomasz/index.html), [Stelian Coros](http://crl.ethz.ch/people/coros/index.html)
+
+This is an implementation of [Modal Folding: Discovering Smooth Folding Patterns for Sheet Materials using Strain-Space Modes.](https://tangpengbin.github.io/publications/Folding/index.html) [Tang et al. 2024].
 
 If you use this repository in your work, please cite our paper.
 
